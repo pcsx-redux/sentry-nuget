@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>x64sentry-native</id>
+    <version>$version$</version>
+    <authors>Sentry</authors>
+    <owners>rixnobis</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://docs.sentry.io/platforms/native/</projectUrl>
+    <description>Headers, import libraries, and runtime dlls for Sentry native, for x64 only.</description>
+    <summary>Headers, import libraries, and runtime dlls for Sentry native, for x64 only.</summary>
+    <tags>sentry native nativepackage</tags>
+  </metadata>
+  <files>
+    <file src="x64sentry-native.targets" target="build" />
+    <file src="dist\include\**" target="build\include" />
+    <file src="src\external\crashpad\client\**\*.h" target="build\include\crashpad\client" />
+    <file src="src\external\crashpad\handler\**\*.h" target="build\include\crashpad\handler" />
+    <file src="src\external\crashpad\util\**\*.h" target="build\include\crashpad\util" />
+    <file src="src\external\crashpad\third_party\mini_chromium\mini_chromium\base\**\*.h" target="build\include\crashpad\mini_chromium\base" />
+    <file src="src\external\crashpad\third_party\mini_chromium\mini_chromium\build\**\*.h" target="build\include\crashpad\mini_chromium\build" />
+    <file src="src\external\crashpad\third_party\mini_chromium\mini_chromium\testing\**\*.h" target="build\include\crashpad\mini_chromium\testing" />
+    <file src="src\external\crashpad\third_party\mini_chromium\build\chromeos_buildflags.h" target="build\include\crashpad\mini_chromium\build" />
+    <file src="dist\lib\sentry.lib" target="build\lib" />
+    <file src="dist\bin\sentry.dll" target="build\bin" />
+    <file src="dist\bin\crashpad_handler.exe" target="build\bin" />
+    <file src="dist\bin\crashpad_wer.dll" target="build\bin" />
+  </files>
+</package>
