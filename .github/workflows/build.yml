@@ -1,0 +1,26 @@
+name: Build package
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: sentry-native release to package
+        default: 0.17.3
+
+jobs:
+  build:
+    runs-on: windows-2025
+    steps:
+      - uses: actions/checkout@v4
+      - uses: NuGet/setup-nuget@v2
+      - name: Build
+        shell: cmd
+        run: call build.bat ${{ inputs.version || '0.17.3' }} "" ${{ inputs.version || '0.17.3' }}.1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nupkg
+          path: |
+            *.nupkg
+            dist/bin/*

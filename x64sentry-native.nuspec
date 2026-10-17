@@ -24,7 +24,10 @@
     <file src="src\external\crashpad\third_party\mini_chromium\build\chromeos_buildflags.h" target="build\include\crashpad\mini_chromium\build" />
     <file src="dist\lib\sentry.lib" target="build\lib" />
     <file src="dist\bin\sentry.dll" target="build\bin" />
+    <file src="dist\bin\sentry.pdb" target="build\bin" />
     <file src="dist\bin\crashpad_handler.exe" target="build\bin" />
+    <file src="dist\bin\crashpad_handler.pdb" target="build\bin" />
     <file src="dist\bin\crashpad_wer.dll" target="build\bin" />
+    <file src="dist\bin\crashpad_wer.pdb" target="build\bin" />
   </files>
 </package>
